@@ -3,49 +3,107 @@ import 'conestants.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
+          Padding(
+            padding: EdgeInsets.only(top: 50, right: 15, left: 15),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.sort_outlined),
+                      style: IconButton.styleFrom(
+                        backgroundColor: Color(0xffecf0f4),
+                      ),
+                    ),
+                    SizedBox(width: 15),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'DELIVER TO',
+                          style: TextStyle(
+                            color: MyColors.mainColor,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 12,
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Text('Halal Lab office'),
+                            Icon(Icons.arrow_drop_down),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.shopping_bag_outlined),
+                  color: Colors.white,
+                  style: IconButton.styleFrom(
+                    backgroundColor: Color(0xff181c2e),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 15),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              children: [
+                Text('Hey Halal,', style: TextStyle(fontSize: 19)),
+                Text(
+                  'Good Afternoon',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 15),
           Row(
             children: [
-              IconButton(onPressed: () {}, icon: Icon(Icons.sort_outlined)),
-              Column(
-                children: [
-                  Text(
-                    'DELIVER TO',
-                    style: TextStyle(color: MyColors.mainColor),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: Container(
+                  width: 300,
+                  height: 65,
+                  decoration: BoxDecoration(
+                    color: Color(0xffe9eef6),
+                    borderRadius: BorderRadius.circular(10),
                   ),
-                  Row(
+                  child: Row(
                     children: [
-                      Text('Halal Lab office'),
-                      Icon(Icons.arrow_drop_down),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 15),
+                        child: Icon(
+                          Icons.search,
+                          size: 35,
+                          color: Color(0xffbec1cf),
+                        ),
+                      ),
+                      Text(
+                        'Search dishes, restaurants',
+                        style: TextStyle(
+                          color: Color(0xffbec1cf),
+                          fontSize: 17,
+                        ),
+                      ),
                     ],
                   ),
-                  OutlinedButton(
-                    onPressed: () {},
-                    child: Icon(Icons.shopping_bag_outlined),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          Row(children: [Text('Hey Halal,'), Text('Good Afternoon')]),
-          Row(
-            children: [
-              Container(
-                decoration: BoxDecoration(),
-                child: Row(
-                  children: [
-                    Icon(Icons.search),
-                    Text('Search dishes, restaurants'),
-                  ],
                 ),
               ),
             ],
           ),
+          SizedBox(height: 30),
           Row(
             children: [
               Text('All Categories'),
@@ -58,19 +116,40 @@ class Home extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(),
-                    child: Image.asset(''),
+                    child: Row(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(),
+                          child: Image.asset('assets/fire.jpg'),
+                        ),
+                        Text('All'),
+                      ],
+                    ),
                   ),
-                  Text('Hot Dog'),
                   Container(
                     decoration: BoxDecoration(),
-                    child: Image.asset(''),
+                    child: Row(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(),
+                          child: Image.asset('assets/hotDog.jpg'),
+                        ),
+                        Text('Hot Dog'),
+                      ],
+                    ),
                   ),
-                  Text('Burger'),
                   Container(
                     decoration: BoxDecoration(),
-                    child: Image.asset(''),
+                    child: Row(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(),
+                          child: Image.asset('assets/burger.png'),
+                        ),
+                        Text('Burger'),
+                      ],
+                    ),
                   ),
-                  Text('All'),
                 ],
               ),
             ],
@@ -84,7 +163,10 @@ class Home extends StatelessWidget {
 
           Row(
             children: [
-              Container(decoration: BoxDecoration(), child: Image.asset('')),
+              Container(
+                decoration: BoxDecoration(),
+                child: Image.asset('assets/firstPhoto.jpeg'),
+              ),
             ],
           ),
           Row(children: [Text('Rose Garden Restaurant')]),
@@ -100,7 +182,7 @@ class Home extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(),
-                    child: Image.asset(''),
+                    child: Image.asset('assets/secondPhoto.jpeg'),
                   ),
                 ],
               ),
