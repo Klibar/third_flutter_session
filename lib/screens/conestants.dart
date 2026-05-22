@@ -8,39 +8,42 @@ class Category extends StatelessWidget {
   const Category({
     super.key,
     required this.bgColor,
-    required this.imagePath,
-    required this.titel,
     required this.hoverColor,
+    required this.imagePath,
+    required this.text,
   });
-  final int bgColor;
+  final Color bgColor;
   final Color hoverColor;
   final String imagePath;
-  final String titel;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 130,
-      height: 60,
       decoration: BoxDecoration(
-        color: Color(bgColor),
+        color: bgColor,
         borderRadius: BorderRadius.circular(50),
-        boxShadow: [
-          BoxShadow(color: Colors.black, blurRadius: 1, spreadRadius: -1),
-        ],
       ),
+      padding: EdgeInsets.fromLTRB(10, 10, 20, 10),
       child: Row(
-        mainAxisAlignment: .spaceAround,
+        mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            width: 40,
-            height: 40,
+            width: 50,
+            height: 50,
             decoration: BoxDecoration(
               color: hoverColor,
-              borderRadius: BorderRadius.circular(40),
+              shape: BoxShape.circle,
             ),
-            child: Image.asset(imagePath, fit: BoxFit.contain),
+            child: Padding(
+              padding: EdgeInsets.all(10),
+              child: Image.asset(imagePath),
+            ),
           ),
-          Text(titel, style: TextStyle(fontWeight: FontWeight.bold)),
+          SizedBox(width: 8),
+          Text(
+            text,
+            style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+          ),
         ],
       ),
     );

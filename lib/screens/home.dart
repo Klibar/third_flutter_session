@@ -133,23 +133,23 @@ class Home extends StatelessWidget {
                   child: Row(
                     children: [
                       Category(
-                        bgColor: 0xffffd27c,
+                        bgColor: Color(0xffffd27c),
                         imagePath: 'assets/fire.png',
-                        titel: 'All',
+                        text: 'All',
                         hoverColor: Colors.white,
                       ),
                       SizedBox(width: 10),
                       Category(
-                        bgColor: 0xffffffff,
+                        bgColor: Color(0xffffffff),
                         imagePath: 'assets/hotDog.png',
-                        titel: 'Hot Dog',
+                        text: 'Hot Dog',
                         hoverColor: Color(0xFFf5f5f4),
                       ),
                       SizedBox(width: 10),
                       Category(
-                        bgColor: 0xffffffff,
+                        bgColor: Color(0xffffffff),
                         imagePath: 'assets/burger.png',
-                        titel: 'Burger',
+                        text: 'Burger',
                         hoverColor: Color(0xfff5f5f4),
                       ),
                     ],
