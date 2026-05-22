@@ -1,6 +1,7 @@
 # third_flutter_session
 
 A new Flutter project.
+![screenshot](assets/appScreen.jpg)
 
 ## Getting Started
 
