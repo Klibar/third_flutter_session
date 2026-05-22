@@ -76,7 +76,7 @@ class Home extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: Container(
-                    width: 300,
+                    width: 330,
                     height: 65,
                     decoration: BoxDecoration(
                       color: Color(0xffe9eef6),
