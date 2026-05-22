@@ -4,11 +4,6 @@ class MyColors {
   static var mainColor = Color(0xffff7622);
 }
 
-class Axiss {
-  static double imageWidth = 40;
-  static double imageHeight = 40;
-}
-
 class Category extends StatelessWidget {
   const Category({
     super.key,
