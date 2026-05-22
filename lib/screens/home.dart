@@ -46,13 +46,39 @@ class Home extends StatelessWidget {
                       ),
                     ],
                   ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.shopping_bag_outlined),
-                    color: Colors.white,
-                    style: IconButton.styleFrom(
-                      backgroundColor: Color(0xff181c2e),
-                    ),
+                  Stack(
+                    children: [
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.shopping_bag_outlined),
+                        color: Colors.white,
+                        style: IconButton.styleFrom(
+                          backgroundColor: Color(0xff181c2e),
+                        ),
+                      ),
+                      Positioned(
+                        right: 0,
+                        top: 0,
+                        child: Container(
+                          width: 25,
+                          height: 25,
+                          decoration: BoxDecoration(
+                            color: MyColors.mainColor,
+                            borderRadius: BorderRadius.circular(12.5),
+                          ),
+                          child: Center(
+                            child: Text(
+                              '2',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -129,7 +155,7 @@ class Home extends StatelessWidget {
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Container(
-                  height: 70,
+                  height: 71,
                   child: Row(
                     children: [
                       Category(

@@ -19,7 +19,6 @@ class Category extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 65,
       decoration: BoxDecoration(
         boxShadow: [BoxShadow(color: Colors.black, blurRadius: 0.001)],
         color: bgColor,
